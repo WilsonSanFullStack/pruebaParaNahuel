@@ -1,12 +1,5 @@
-// import comuna from "../../../../Server/src/comunas.json";
-
 import React, { useEffect, useState } from "react";
-//import comuna from "../Cotizador/comunas.json"
-
 import "./cotizador.css"
-
-
-
 
 
 const Formulario = () => {
@@ -28,7 +21,7 @@ useEffect(()=>{
       
   }
 
-  getAllComunas()
+   getAllComunas()
 
 },[])
 
@@ -344,7 +337,7 @@ useEffect(()=>{
     <div className="conteiner p-4">
       <div className="fondo">
              
-      <a className="btn btn-success" href="https://ochoaim.cl/"><buttom className= "Boton">Web principal</buttom></a>
+      <a className="btn btn-success" href="https://ochoaim.cl/"><button className= "Boton">Web principal</button></a>
         <h1 className="titulo">Cotizador</h1>
       </div>
       <br />
