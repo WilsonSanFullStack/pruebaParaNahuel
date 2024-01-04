@@ -16,7 +16,13 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to my API" });
 });
-
+app.use(express.static('tu_carpeta_de_recursos', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    }
+  },
+}));
 app.use(router);
 
 // handling errors
