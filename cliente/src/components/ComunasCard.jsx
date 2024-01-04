@@ -21,7 +21,7 @@ function ComunasCard({ comuna }) {
       >
 
 
-        <h3 classNameName="cardTitulo">{comuna.comuna}</h3>
+        <h3 className="cardTitulo">{comuna.comuna}</h3>
         <p>{comuna.generacion} Kwh/Kwp * Año.</p>
         <p>{comuna.costocombustiblepeaje} costo de combustible de Peaje.</p>
         <p>{comuna.valorventaenergia} Valor de venta de Energia.</p>

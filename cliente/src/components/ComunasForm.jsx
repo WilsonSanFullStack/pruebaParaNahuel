@@ -87,7 +87,7 @@ const ComunasForm = () => {
           <br />
           <br />
           <form onSubmit={handleSubmit} className="card bg-success bg-gradient text-light card-body">
-            <h3 classNameName="font-bold text-2xl my-3 text-white">
+            <h3 className="font-bold text-2xl my-3 text-white">
               {params.id ? "Actualizar Comuna" : "Crear Comuna"}
 
             </h3>
@@ -95,7 +95,7 @@ const ComunasForm = () => {
               type="text"
               name="comuna"
               placeholder="Escriba su Comuna"
-              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.comuna}
               autoFocus
@@ -105,7 +105,7 @@ const ComunasForm = () => {
               type="text"
               name="generacion"
               placeholder="Escribe su Generacion en Kwh kwp por año"
-              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.generacion}
               autoFocus
@@ -114,7 +114,7 @@ const ComunasForm = () => {
               type="text"
               name="costocombustiblepeaje"
               placeholder="Escribe su Costo de Combustible y peaj"
-              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.costocombustiblepeaje}
               autoFocus
@@ -123,14 +123,14 @@ const ComunasForm = () => {
               type="text"
               name="valorventaenergia"
               placeholder="Escribe el valor en venta de energia"
-              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.valorventaenergia}
               autoFocus
             />
 
 
-            <div classNameName="flex justify-between">
+            <div className="flex justify-between">
               <button
                 type="submit"
                 disabled={!comu.comuna || !comu.generacion || !comu.costocombustiblepeaje || !comu.valorventaenergia}

@@ -342,15 +342,15 @@ useEffect(()=>{
 
   return (
     <div className="conteiner p-4">
-      <div classNameName="fondo">
+      <div className="fondo">
              
-      <a className="btn btn-success" href="https://ochoaim.cl/"><buttom classNameName= "Boton">Web principal</buttom></a>
-        <h1 classNameName="titulo">Cotizador</h1>
+      <a className="btn btn-success" href="https://ochoaim.cl/"><buttom className= "Boton">Web principal</buttom></a>
+        <h1 className="titulo">Cotizador</h1>
       </div>
       <br />
       <br />
       <div>
-        <p classNameName="parrafo">
+        <p className="parrafo">
            Seleccione su comuna eh ingrese el valor de su consumo mensual de los ultimos 12 en kWh luego ingrese el costo de energia. Tenga en cuenta que este se encuentra en su factura de consumo de luz, ya que esto generara un serie de calculos en donde, visualizara su valor de cotizacion continuado de una tabla en donde vera el ahorro energetico.
 
         </p>
@@ -376,14 +376,14 @@ useEffect(()=>{
             })}
           </select>
           <div className="mb-3">
-            <h3 classNameName="consumo">Consumo Mensuales</h3>
+            <h3 className="consumo">Consumo Mensuales</h3>
 
             <input
               type="text"
               name="consumo"
               value={input.consumo1}
               onChange={handleConsumo1}
-              classNameName="col"
+              className="col"
               placeholder="Enero"
             />
             <input
@@ -391,7 +391,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo2}
               onChange={handleConsumo2}
-              classNameName="col"
+              className="col"
               placeholder="Febrero"
             />
             <input
@@ -399,7 +399,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo3}
               onChange={handleConsumo3}
-              classNameName="col"
+              className="col"
               placeholder="Marzo"
             />
             <input
@@ -407,7 +407,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo4}
               onChange={handleConsumo4}
-              classNameName="col"
+              className="col"
               placeholder="Abril"
             />
             <input
@@ -415,7 +415,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo5}
               onChange={handleConsumo5}
-              classNameName="col"
+              className="col"
               placeholder="Mayo"
             />
             <input
@@ -423,7 +423,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo6}
               onChange={handleConsumo6}
-              classNameName="col"
+              className="col"
               placeholder="Junio"
             />
             <input
@@ -431,7 +431,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo7}
               onChange={handleConsumo7}
-              classNameName="col"
+              className="col"
               placeholder="Julio"
             />
             <input
@@ -439,7 +439,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo8}
               onChange={handleConsumo8}
-              classNameName="col"
+              className="col"
               placeholder="Agosto"
             />
             <input
@@ -447,7 +447,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo9}
               onChange={handleConsumo9}
-              classNameName="col"
+              className="col"
               placeholder="Septiembre"
             />
             <input
@@ -455,7 +455,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo10}
               onChange={handleConsumo10}
-              classNameName="col"
+              className="col"
               placeholder="Octubre"
             />
             <input
@@ -463,7 +463,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo11}
               onChange={handleConsumo11}
-              classNameName="col"
+              className="col"
               placeholder="Noviembre"
             />
             <input
@@ -471,7 +471,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo12}
               onChange={handleConsumo12}
-              classNameName="col"
+              className="col"
               placeholder="Diciembre"
             />
           </div>
@@ -485,7 +485,7 @@ useEffect(()=>{
             name="consumo"
             value={input.costeDeEnergia}
             onChange={handleCosteDeEnergia}
-            classNameName="col"
+            className="col"
             placeholder="Coste De Energia"
           />
 
