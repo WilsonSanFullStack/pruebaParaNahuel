@@ -16,6 +16,15 @@ server.use(
 server.use(express.json());
 server.use(morgan("dev"));
 server.use(helmet());
+app.use(
+  express.static("public", {
+    setHeaders: (res, path) => {
+      if (path.endsWith(".js")) {
+        res.setHeader("Content-Type", "application/javascript");
+      }
+    },
+  })
+);
 
 server.use(router);
 
