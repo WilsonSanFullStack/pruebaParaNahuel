@@ -6,7 +6,8 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const irAUrl = () => {
-        window.location.href = "https://main--steady-cupcake-2b16b2.netlify.app/comuna";
+        // window.location.href = "http://localhost:5173/comuna";
+        window.location.href = "https://main--regal-meerkat-bcfa6b.netlify.app/comuna";
     };
 
     const handleSubmit = (event) => {
@@ -18,7 +19,8 @@ const Login = () => {
 
         if (username === correctUsername && password === correctPassword) {
             alert('Inicio de sesión exitoso');
-            window.location.href = 'https://main--steady-cupcake-2b16b2.netlify.app/comuna';
+            // window.location.href = 'http://localhost:5173/comuna';
+            window.location.href = 'https://main--regal-meerkat-bcfa6b.netlify.app/comuna';
         } else {
             alert('Nombre de usuario o contraseña incorrectos');
         }

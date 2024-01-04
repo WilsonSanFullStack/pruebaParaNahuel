@@ -10,8 +10,9 @@ const ComunasList = () => {
 
   const loadComunas = async () => {
     const response = await fetch("https://prueba-owrk.onrender.com/comunas");
+    // const response = await fetch("http://localhost:3001/comunas");
     const data = await response.json();
-    console.log(data);
+    data.sort((a, b) => a.comuna.localeCompare(b.comuna))
     setComunas(data);
   };
 

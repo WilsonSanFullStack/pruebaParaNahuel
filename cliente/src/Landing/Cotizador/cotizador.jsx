@@ -20,6 +20,7 @@ useEffect(()=>{
 
   async function getAllComunas() {
     try {
+      // const res = await fetch("http://localhost:3001/comunas");
       const res = await fetch("https://prueba-owrk.onrender.com/comunas");
       const comunas = await res.json();
       setComuna(comunas);
@@ -32,8 +33,6 @@ useEffect(()=>{
   getAllComunas()
 
 },[])
-
-console.log(comuna)
 
 
   const [comunas, setComunas] = useState("");
@@ -301,7 +300,7 @@ console.log(comuna)
     }
     ;
   }
-  comuna.sort((a, b) => a.comuna.localeCompare(b.Comuna));
+  comuna.sort((a, b) => a.comuna.localeCompare(b.comuna));
 
   const precios = {
     tres: { paneles: 6, inversor: "Inversor OnGrid 3kw", canalizacion: 20 },
