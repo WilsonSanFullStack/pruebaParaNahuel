@@ -6,9 +6,6 @@ import React, { useEffect, useState } from "react";
 import "./cotizador.css"
 
 
-import { Link } from 'react-router-dom'
-import Login from "../login/login";
-
 
 
 
@@ -23,6 +20,7 @@ useEffect(()=>{
       // const res = await fetch("http://localhost:3001/comunas");
       const res = await fetch("https://prueba-owrk.onrender.com/comunas");
       const comunas = await res.json();
+      console.log(comunas)
       setComuna(comunas);
     } catch (error) {
       console.log(error);
@@ -343,16 +341,16 @@ useEffect(()=>{
 
 
   return (
-    <div class="conteiner p-4">
-      <div className="fondo">
+    <div className="conteiner p-4">
+      <div classNameName="fondo">
              
-      <a class="btn btn-success" href="https://ochoaim.cl/"><buttom className= "Boton">Web principal</buttom></a>
-        <h1 className="titulo">Cotizador</h1>
+      <a className="btn btn-success" href="https://ochoaim.cl/"><buttom classNameName= "Boton">Web principal</buttom></a>
+        <h1 classNameName="titulo">Cotizador</h1>
       </div>
       <br />
       <br />
       <div>
-        <p className="parrafo">
+        <p classNameName="parrafo">
            Seleccione su comuna eh ingrese el valor de su consumo mensual de los ultimos 12 en kWh luego ingrese el costo de energia. Tenga en cuenta que este se encuentra en su factura de consumo de luz, ya que esto generara un serie de calculos en donde, visualizara su valor de cotizacion continuado de una tabla en donde vera el ahorro energetico.
 
         </p>
@@ -361,9 +359,9 @@ useEffect(()=>{
       
       
 
-      <div class="col-md-4 mx-auto">
+      <div className="col-md-4 mx-auto">
 
-        <form class="card bg-success bg-gradient text-light card-body" >
+        <form className="card bg-success bg-gradient text-light card-body" >
           <h3>Comuna</h3>
 
           <select value={comunas} onChange={handleComuna}>
@@ -377,15 +375,15 @@ useEffect(()=>{
               );
             })}
           </select>
-          <div class="mb-3">
-            <h3 className="consumo">Consumo Mensuales</h3>
+          <div className="mb-3">
+            <h3 classNameName="consumo">Consumo Mensuales</h3>
 
             <input
               type="text"
               name="consumo"
               value={input.consumo1}
               onChange={handleConsumo1}
-              className="col"
+              classNameName="col"
               placeholder="Enero"
             />
             <input
@@ -393,7 +391,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo2}
               onChange={handleConsumo2}
-              className="col"
+              classNameName="col"
               placeholder="Febrero"
             />
             <input
@@ -401,7 +399,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo3}
               onChange={handleConsumo3}
-              className="col"
+              classNameName="col"
               placeholder="Marzo"
             />
             <input
@@ -409,7 +407,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo4}
               onChange={handleConsumo4}
-              className="col"
+              classNameName="col"
               placeholder="Abril"
             />
             <input
@@ -417,7 +415,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo5}
               onChange={handleConsumo5}
-              className="col"
+              classNameName="col"
               placeholder="Mayo"
             />
             <input
@@ -425,7 +423,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo6}
               onChange={handleConsumo6}
-              className="col"
+              classNameName="col"
               placeholder="Junio"
             />
             <input
@@ -433,7 +431,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo7}
               onChange={handleConsumo7}
-              className="col"
+              classNameName="col"
               placeholder="Julio"
             />
             <input
@@ -441,7 +439,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo8}
               onChange={handleConsumo8}
-              className="col"
+              classNameName="col"
               placeholder="Agosto"
             />
             <input
@@ -449,7 +447,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo9}
               onChange={handleConsumo9}
-              className="col"
+              classNameName="col"
               placeholder="Septiembre"
             />
             <input
@@ -457,7 +455,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo10}
               onChange={handleConsumo10}
-              className="col"
+              classNameName="col"
               placeholder="Octubre"
             />
             <input
@@ -465,7 +463,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo11}
               onChange={handleConsumo11}
-              className="col"
+              classNameName="col"
               placeholder="Noviembre"
             />
             <input
@@ -473,7 +471,7 @@ useEffect(()=>{
               name="consumo"
               value={input.consumo12}
               onChange={handleConsumo12}
-              className="col"
+              classNameName="col"
               placeholder="Diciembre"
             />
           </div>
@@ -487,7 +485,7 @@ useEffect(()=>{
             name="consumo"
             value={input.costeDeEnergia}
             onChange={handleCosteDeEnergia}
-            className="col"
+            classNameName="col"
             placeholder="Coste De Energia"
           />
 
@@ -497,12 +495,12 @@ useEffect(()=>{
       </div>
 
 
-      <div class="row">
+      <div className="row">
 
 
 
-        <h4 class="col-sm-4">Nombre de la comuna: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Nombre de la comuna: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -511,8 +509,8 @@ useEffect(()=>{
         </h4>
 
 
-        <h4 class="col-sm-4">Generación kwh kwp año: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Generación kwh kwp año: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -521,8 +519,8 @@ useEffect(()=>{
         </h4>
 
 
-        <h4 class="col-sm-4">Costo de combustible mas peaje: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Costo de combustible mas peaje: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -531,8 +529,8 @@ useEffect(()=>{
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de venta energía: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de venta energía: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -541,20 +539,20 @@ useEffect(()=>{
         </h4>
 
 
-        <h4 class="col-sm-4">Valor Historico: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor Historico: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat().format(valorHistorico)}
         </h4>
 
 
-        <h4 class="col-sm-4">Valor Kit: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor Kit: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat().format(valorDelKit)}
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de combustible: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de combustible: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
@@ -564,8 +562,8 @@ useEffect(()=>{
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de Cotizacion: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de Cotizacion: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
@@ -583,7 +581,7 @@ useEffect(()=>{
 
       {ahorroPorYear?.map((x, y) => {
         return (
-          <table class="table table-success  table-striped" key={y + 1}>
+          <table className="table table-success  table-striped" key={y + 1}>
             <thead>
               <tr>
                 <th scope="col"><h5>Años</h5></th>

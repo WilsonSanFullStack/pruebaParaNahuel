@@ -21,7 +21,7 @@ const ComunasList = () => {
   }, []);
 
   return (
-    <div class="conteiner p3">
+    <div className="conteiner p3">
       <Navbar></Navbar>
       <br />
       <br />

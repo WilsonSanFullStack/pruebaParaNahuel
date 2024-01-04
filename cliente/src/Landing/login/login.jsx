@@ -27,30 +27,30 @@ const Login = () => {
     };
 
     return (
-        <div class="conteiner p4">
-            <div class="row">
+        <div className="conteiner p4">
+            <div className="row">
 
-                <div class="col-md-4 mx-auto">
-                    <h1 class="mb-3">Bienvenido</h1>
+                <div className="col-md-4 mx-auto">
+                    <h1 className="mb-3">Bienvenido</h1>
 
-                    <form onSubmit={handleSubmit} class="card bg-success bg-gradient text-light card-body">
-                        <div class="mb-3">
+                    <form onSubmit={handleSubmit} className="card bg-success bg-gradient text-light card-body">
+                        <div className="mb-3">
                             <label>
                                 <h5>Nombre de usuario:</h5>
-                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} class="form-control"  />
+                                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control"  />
                             </label>
                         </div>
 
 
-                        <div class="mb-3">
+                        <div className="mb-3">
                             <label>
                                 <h5>Contraseña:</h5>
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} class="form-control" />
+                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" />
                             </label>
                         </div>
 
 
-                            <input type="submit" value="Iniciar sesión" onSubmit={irAUrl} class="btn btn-primary" />
+                            <input type="submit" value="Iniciar sesión" onSubmit={irAUrl} className="btn btn-primary" />
                         
                     </form>
 

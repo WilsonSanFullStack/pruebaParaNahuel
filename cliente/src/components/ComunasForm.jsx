@@ -79,15 +79,15 @@ const ComunasForm = () => {
 
   return (
 
-    <div class="conteiner p3">
+    <div className="conteiner p3">
       <Navbar></Navbar>
-      <div class="">
+      <div className="">
 
-        <div class="col-md-4 mx-auto">
+        <div className="col-md-4 mx-auto">
           <br />
           <br />
-          <form onSubmit={handleSubmit} class="card bg-success bg-gradient text-light card-body">
-            <h3 className="font-bold text-2xl my-3 text-white">
+          <form onSubmit={handleSubmit} className="card bg-success bg-gradient text-light card-body">
+            <h3 classNameName="font-bold text-2xl my-3 text-white">
               {params.id ? "Actualizar Comuna" : "Crear Comuna"}
 
             </h3>
@@ -95,7 +95,7 @@ const ComunasForm = () => {
               type="text"
               name="comuna"
               placeholder="Escriba su Comuna"
-              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.comuna}
               autoFocus
@@ -105,7 +105,7 @@ const ComunasForm = () => {
               type="text"
               name="generacion"
               placeholder="Escribe su Generacion en Kwh kwp por año"
-              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.generacion}
               autoFocus
@@ -114,7 +114,7 @@ const ComunasForm = () => {
               type="text"
               name="costocombustiblepeaje"
               placeholder="Escribe su Costo de Combustible y peaj"
-              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.costocombustiblepeaje}
               autoFocus
@@ -123,18 +123,18 @@ const ComunasForm = () => {
               type="text"
               name="valorventaenergia"
               placeholder="Escribe el valor en venta de energia"
-              className="border border-gray-400 p-2 rounded-md block my-2 w-full"
+              classNameName="border border-gray-400 p-2 rounded-md block my-2 w-full"
               onChange={handleChange}
               value={comu.valorventaenergia}
               autoFocus
             />
 
 
-            <div className="flex justify-between">
+            <div classNameName="flex justify-between">
               <button
                 type="submit"
                 disabled={!comu.comuna || !comu.generacion || !comu.costocombustiblepeaje || !comu.valorventaenergia}
-                class="btn btn-primary"
+                className="btn btn-primary"
               >
                 {loading
                   ? // <CircularProgress color="inherit" size={25} />
@@ -144,7 +144,7 @@ const ComunasForm = () => {
 
               {params.id && (
                 <button
-                class="btn btn-danger"
+                className="btn btn-danger"
                   onClick={() => handleDelete(params.id)}
                 >
                   Delete
