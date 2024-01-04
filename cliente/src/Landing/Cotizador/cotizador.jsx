@@ -20,7 +20,7 @@ useEffect(()=>{
 
   async function getAllComunas() {
     try {
-      const res = await fetch("http://localhost:4000/comunas");
+      const res = await fetch("https://prueba-owrk.onrender.com/comunas");
       const comunas = await res.json();
       setComuna(comunas);
     } catch (error) {
