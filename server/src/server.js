@@ -16,7 +16,7 @@ server.use(
 server.use(express.json());
 server.use(morgan("dev"));
 server.use(helmet());
-app.use(
+server.use(
   express.static("public", {
     setHeaders: (res, path) => {
       if (path.endsWith(".js")) {
