@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to my API" });
 });
-app.use(express.static('tu_carpeta_de_recursos', {
+app.use(express.static('public', {
   setHeaders: (res, path) => {
     if (path.endsWith('.js')) {
       res.setHeader('Content-Type', 'application/javascript');
